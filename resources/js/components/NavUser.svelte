@@ -38,8 +38,12 @@
                 {/snippet}
             </DropdownMenuTrigger>
             <DropdownMenuContent
-                class="w-full min-w-0 rounded-lg"
-                side={$sidebarState === 'collapsed' && !$isMobile ? 'left' : 'top'}
+                class={$sidebarState === 'collapsed' && !$isMobile
+                ? 'min-w-56 rounded-lg bottom-0'
+                : 'w-full min-w-0 rounded-lg'}
+                side={$sidebarState === 'collapsed' && !$isMobile
+                ? 'right'
+                : 'top'}
                 align="end"
                 sideOffset={4}
             >
